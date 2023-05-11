@@ -8,6 +8,7 @@ import (
 	"os"
 	"testing"
 
+	_ "github.com/lib/pq"
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/wait"
 )
@@ -16,7 +17,7 @@ var DB *sql.DB
 var ctx context.Context
 var container testcontainers.Container
 
-func TestMain(m *testing.M) {
+func InitContainers(m *testing.M) {
 
 	if DB == nil || isDBNotInitialized() {
 		initDB()

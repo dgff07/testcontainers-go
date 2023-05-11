@@ -10,7 +10,7 @@ import (
 )
 
 func TestMain(m *testing.M) {
-	tests.TestMain(m)
+	tests.InitContainers(m)
 }
 
 func TestSum(t *testing.T) {
