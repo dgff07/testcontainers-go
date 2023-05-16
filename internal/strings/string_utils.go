@@ -7,6 +7,5 @@ import (
 )
 
 func uppercase(value string) string {
-	tests.DB.Ping()
 	return strings.ToUpper(value)
 }
